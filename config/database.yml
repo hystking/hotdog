@@ -49,11 +49,11 @@ test:
 staging:
   <<: *default
   database: hotdog_production
-  username: hotdog
-  password: <%= ENV['HOTDOG_DATABASE_PASSWORD'] %>
+  username: root
+  password: 
 
 production:
   <<: *default
   database: hotdog_production
-  username: hotdog
-  password: <%= ENV['HOTDOG_DATABASE_PASSWORD'] %>
+  username: root
+  password: 
