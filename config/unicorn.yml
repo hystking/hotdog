@@ -1,0 +1,30 @@
+defaults: &defaults
+  timeout:           60
+  preload:           true
+  log:
+    err:             "log/unicorn.stderr.log"
+    out:             "log/unicorn.stdout.log"
+  socket:
+    file:            "tmp/sockets/unicorn.sock"
+    backlog:         8192
+  pid:               "tmp/pids/unicorn.pid"
+
+local:
+  <<: *defaults
+  worker_processes:  1
+
+test:
+  <<: *defaults
+  worker_processes:  1
+
+development:
+  <<: *defaults
+  worker_processes:  1
+
+staging:
+  <<: *defaults
+  worker_processes:  1
+
+production:
+  <<: *defaults
+  worker_processes:  1
