@@ -46,6 +46,12 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+staging:
+  <<: *default
+  database: hotdog_production
+  username: hotdog
+  password: <%= ENV['HOTDOG_DATABASE_PASSWORD'] %>
+
 production:
   <<: *default
   database: hotdog_production
